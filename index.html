@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Curso básico de Vue.js 2 - Reto del tema 22</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div id="app">
+
+            <button v-on:click="toggleModal">Show Modal</button>
+
+            <modal v-show="showModal"
+                   v-on:close="toggleModal"
+                   v-bind:title="title"
+            >
+                <template slot="body">
+                    <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Nobis non, alias nostrum vel
+                    repellendus odit provident asperiores harum enim
+                    facilis mollitia. Quibusdam, aliquid aperiam
+                    laudantium itaque iure quos eligendi obcaecati?</p>
+                </template>
+            </modal>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="./app.js"></script>
+    </body>
+</html>
